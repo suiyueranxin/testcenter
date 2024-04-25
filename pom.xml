@@ -1,0 +1,158 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.sap</groupId>
+    <artifactId>testcenter</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>testcenter</name>
+    <packaging>war</packaging>
+    
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.9.RELEASE</version>
+    </parent>
+    
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-jasper</artifactId>
+            <scope>provided</scope>
+        </dependency>
+ 
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- no need to restart tomcat once change by using this -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
+        </dependency>
+        
+        <!-- mysql-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.45</version>
+        </dependency>
+ 
+        <!-- jpa-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+        
+        <!-- jira -->
+        <dependency>
+            <groupId>com.atlassian.jira</groupId>
+            <artifactId>jira-rest-java-client-core</artifactId>
+            <version>5.0.4</version>
+        </dependency>
+        <!--  
+        <dependency>
+            <groupId>com.atlassian.jira</groupId>
+            <artifactId>jira-rest-java-client-api</artifactId>
+            <version>5.0.4</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>io.atlassian.util.concurrent</groupId>
+            <artifactId>atlassian-util-concurrent</artifactId>
+            <version>4.0.1</version>
+        </dependency>
+        -->
+        <dependency>
+            <groupId>com.atlassian.fugue</groupId>
+            <artifactId>fugue</artifactId>
+            <version>2.7.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>18.0</version>
+        </dependency>
+        
+        <!-- fastjson -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.9</version>
+        </dependency>
+        
+        <!-- hibernate -->
+        <dependency>
+            <groupId>com.vladmihalcea</groupId>
+            <artifactId>hibernate-types-5</artifactId>
+            <version>2.2.0</version>
+        </dependency>
+        
+        <!-- jgit -->
+        <dependency>
+		    <groupId>org.eclipse.jgit</groupId>
+		    <artifactId>org.eclipse.jgit</artifactId>
+		    <version>4.11.0.201803080745-r</version>
+	    </dependency>
+	    
+	    <!-- thymeleaf -->
+	    <dependency>
+	       <groupId>org.springframework.boot</groupId>
+	       <artifactId>spring-boot-starter-thymeleaf</artifactId>
+	    </dependency>
+    
+        <dependency>
+            <groupId>com.sap.db.jdbc</groupId>
+            <artifactId>ngdbc</artifactId>
+            <version>2.3.2</version>
+        </dependency>
+        
+        <!-- dom -->
+        <!--  
+        <dependency>
+		    <groupId>dom4j</groupId>
+		    <artifactId>dom4j</artifactId>
+		    <version>1.6.1</version>
+		</dependency>
+		<dependency>
+		    <groupId>jaxen</groupId>
+		    <artifactId>jaxen</artifactId>
+		    <version>1.1.6</version>
+		</dependency>
+		-->
+		<dependency>
+		    <groupId>org.jsoup</groupId>
+		    <artifactId>jsoup</artifactId>
+		    <version>1.11.3</version>
+		</dependency>
+    </dependencies>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <!-- throw warn of not find jar -->
+        <tomcat.version>8.0.32</tomcat.version>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>
